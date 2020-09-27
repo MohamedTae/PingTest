@@ -33,8 +33,10 @@ class Base {
         double r = 5;
         if (r <= 5) {
             fail("oops");
+            currentBuild.result = 'FAILURE';
         } else if (r < 0.2) {
             throw new AssumptionViolatedException("skipping");
         }
     }
+
 }
