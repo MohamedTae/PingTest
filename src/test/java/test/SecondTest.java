@@ -26,7 +26,7 @@ package test;
 
 import org.junit.Test;
 
-public class SomeTest extends Base {
+public class SecondTest extends Base {
 
     @Test public void test1() {
         run();
