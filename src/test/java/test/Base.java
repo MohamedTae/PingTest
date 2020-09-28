@@ -20,7 +20,7 @@ public class Base {
                     s = s.substring(0, s.indexOf("%"));
                     System.out.println(s);
                     Float PacketLoss = Float.valueOf(s);
-                    if(PacketLoss >= 0){
+                    if(PacketLoss >= 50){
                         fail("Failed");
                         System.out.println("line: " + PacketLoss);
                     }
