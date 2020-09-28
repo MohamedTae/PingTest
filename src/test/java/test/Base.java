@@ -16,7 +16,8 @@ public class Base {
             while ((s = br.readLine()) != null){
                 System.out.println(s);
                 if(s.contains("packet loss")){
-                    System.out.println(s);
+                    boolean Hello = s.contains("packet loss");
+                    System.out.println(Hello);
                     String mySubString = s.substring(
                         s.lastIndexOf(", ") + 1, 
                         s.lastIndexOf("%")
