@@ -10,7 +10,7 @@ public class Base {
         String s;
         Process p;
         try {
-            p = Runtime.getRuntime().exec("ping -c10 google.com");
+            p = Runtime.getRuntime().exec("ping -c10 8.8.8.8");
             BufferedReader br = new BufferedReader(
                 new InputStreamReader(p.getInputStream()));
             while ((s = br.readLine()) != null){
