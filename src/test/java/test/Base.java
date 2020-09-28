@@ -23,6 +23,8 @@ public class Base {
                     Float PacketLoss = Float.valueOf(mySubString);
                     if(PacketLoss >= 50){
                         fail("Failed");
+                        System.out.println("line: " + PacketLoss);
+
                     }
                     else{
                         System.out.println("line: " + PacketLoss);
