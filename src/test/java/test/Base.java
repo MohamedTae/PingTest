@@ -10,12 +10,13 @@ public class Base {
         String s;
         Process p;
         try {
-            p = Runtime.getRuntime().exec("ping -c10 8.65.3.54");
+            p = Runtime.getRuntime().exec("ping -c10 google.com");
             BufferedReader br = new BufferedReader(
                 new InputStreamReader(p.getInputStream()));
             while ((s = br.readLine()) != null){
                 System.out.println(s);
                 if(s.contains("packet loss")){
+                    System.out.println(s);
                     String mySubString = s.substring(
                         s.lastIndexOf(", ") + 1, 
                         s.lastIndexOf("%")
