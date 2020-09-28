@@ -32,7 +32,7 @@ public class Base {
                 }
             }
             p.waitFor();
-            //System.out.println ("exit: " + p.exitValue());
+            System.out.println ("exit: " + p.exitValue());
             p.destroy();
         } catch (Exception e) {}
     }
