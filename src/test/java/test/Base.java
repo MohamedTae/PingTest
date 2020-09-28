@@ -20,7 +20,7 @@ public class Base {
                         s.lastIndexOf(", ") + 1, 
                         s.lastIndexOf("%")
                     );
-                    Float PacketLoss = Float.valueOf(mySubString);
+                    Integer PacketLoss = Integer.valueOf(mySubString);
                     if(PacketLoss >= 0){
                         fail("Failed");
                         System.out.println("line: " + PacketLoss);
