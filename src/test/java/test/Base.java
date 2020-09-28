@@ -21,7 +21,7 @@ public class Base {
                         s.lastIndexOf("%")
                     );
                     Float PacketLoss = Float.valueOf(mySubString);
-                    if(PacketLoss >= 50){
+                    if(PacketLoss >= 0){
                         fail("Failed");
                         System.out.println("line: " + PacketLoss);
 
