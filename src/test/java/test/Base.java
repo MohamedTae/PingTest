@@ -16,12 +16,10 @@ public class Base {
             while ((s = br.readLine()) != null){
                 System.out.println(s);
                 if(s.contains("packet loss")){
-                    String mySubString = s.substring(
-                        s.lastIndexOf("received,") + 1, 
-                        s.lastIndexOf("packet")
-                    );
-                    System.out.println(mySubString);
-                    Float PacketLoss = Float.valueOf(mySubString);
+                    s = s.substring(s.indexOf("received, ") + 10);
+                    s = s.substring(0, s.indexOf("%"));
+                    System.out.println(s);
+                    Float PacketLoss = Float.valueOf(s);
                     if(PacketLoss >= 50){
                         fail("Failed");
                         System.out.println("line: " + PacketLoss);
