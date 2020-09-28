@@ -1,6 +1,6 @@
 package test;
-
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
+import org.junit.internal.AssumptionViolatedException;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -20,19 +20,19 @@ public class Base {
                         s.lastIndexOf(", ") + 1, 
                         s.lastIndexOf("%")
                     );
-                    Integer PacketLoss = Integer.valueOf(mySubString);
-                    if(PacketLoss >= 0){
+                    Float PacketLoss = Float.valueOf(mySubString);
+                    if(PacketLoss >= 50){
                         fail("Failed");
                         System.out.println("line: " + PacketLoss);
-
                     }
                     else{
                         System.out.println("line: " + PacketLoss);
+                        throw new AssumptionViolatedException("skipping");
                     }
                 }
             }
             p.waitFor();
-            System.out.println ("exit: " + p.exitValue());
+            //System.out.println ("exit: " + p.exitValue());
             p.destroy();
         } catch (Exception e) {}
     }
