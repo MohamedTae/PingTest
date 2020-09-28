@@ -17,8 +17,8 @@ public class Base {
                 System.out.println(s);
                 if(s.contains("packet loss")){
                     String mySubString = s.substring(
-                        s.lastIndexOf(", ") + 1, 
-                        s.lastIndexOf("%")
+                        s.lastIndexOf("received,") + 1, 
+                        s.lastIndexOf("packet")
                     );
                     System.out.println(mySubString);
                     Float PacketLoss = Float.valueOf(mySubString);
