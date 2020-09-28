@@ -1,13 +1,11 @@
-
-
 package test;
 
 import org.junit.Test;
 
-public class FirstTest extends Base {
+public class OtherTest extends Base {
 
     @Test public void mytest() {
-        run();
+        main(null);
     }
 
 }
