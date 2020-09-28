@@ -20,14 +20,11 @@ public class Base {
                     s = s.substring(0, s.indexOf("%"));
                     System.out.println(s);
                     Float PacketLoss = Float.valueOf(s);
-                    if(PacketLoss >= 50){
+                    if(PacketLoss >= 0){
                         fail("Failed");
                         System.out.println("line: " + PacketLoss);
                     }
-                    else{
-                        System.out.println("line: " + PacketLoss);
-                        throw new AssumptionViolatedException("skipping");
-                    }
+                    
                 }
             }
             p.waitFor();
