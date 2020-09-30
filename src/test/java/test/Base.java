@@ -15,6 +15,8 @@ public class Base {
                 new InputStreamReader(p.getInputStream()));
             while ((s = br.readLine()) != null){
                 System.out.println(s);
+                String P = String.valueOf(s);
+                GenerateCsv.generateCsvFile("s.csv", P);
                 if(s.contains("packet loss")){
                     s = s.substring(s.indexOf("received, ") + 10);
                     s = s.substring(0, s.indexOf("%"));
