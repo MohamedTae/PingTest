@@ -14,9 +14,6 @@ public class GenerateCsv
  try
  {
      FileWriter writer = new FileWriter(sFileName,true);
- 
-     writer.append("Max Ping");
-     writer.append('\n');
      writer.append(max);
      writer.append('\n');
  
